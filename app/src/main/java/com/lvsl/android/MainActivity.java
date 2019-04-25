@@ -1,13 +1,22 @@
 package com.lvsl.android;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import com.lvsl.android.base.BaseActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+    private static final String TAG = "lvsl";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initViewAData() {
+
+    }
+
+    @Override
+    protected void reqData() {
+
     }
 }
