@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">lvslAndroidGit</string>
+
+    <string name="to_expand_hint">展开</string>
+    <string name="to_shrink_hint">收起</string>
+
 </resources>
