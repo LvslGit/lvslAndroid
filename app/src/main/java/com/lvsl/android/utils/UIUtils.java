@@ -10,24 +10,23 @@ import android.view.animation.AnimationUtils;
  * @date 2019-04-28
  */
 public class UIUtils {
-    private WeakHandler handler = new WeakHandler(Looper.getMainLooper());
+    private static final String TAG = "lvsl";
 
-    private static void delayClickableWithTime(final View view, long time) {
-        if (view != null) {
-//            view.isClickable() = false;
-//
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    view.isClickable() = true;
-//                }
-//            }, time);
+    private static long lastClickTime;
+
+    /**
+     * 防止快速点击
+     *
+     * @param MIN_DELAY_TIME 两次点击的间隔
+     * @return
+     */
+    public static boolean isFastClick(final int MIN_DELAY_TIME) {// 两次点击间隔不能少于1000ms
+        boolean flag = true;
+        long currentClickTime = System.currentTimeMillis();
+        if ((currentClickTime - lastClickTime) >= MIN_DELAY_TIME) {
+            flag = false;
         }
-
-
-    }
-
-    public static void delayClickable(View view) {
-        delayClickableWithTime(view, 300L);
+        lastClickTime = currentClickTime;
+        return flag;
     }
 }
