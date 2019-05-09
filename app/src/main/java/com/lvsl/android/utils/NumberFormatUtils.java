@@ -49,6 +49,7 @@ public class NumberFormatUtils {
         }
         formatNum = formatNum / 1000;
         float num = ((float) formatNum) / 10;
+
         return String.valueOf(num);
     }
 

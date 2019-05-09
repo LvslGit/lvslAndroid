@@ -8,4 +8,35 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyAppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">@color/black</item>
+        <!--AppBar背景色-->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorAccent">@color/color_169bd9</item>
+        <!--页面背景色-->
+        <item name="android:windowBackground">@color/home_white</item>
+        <!--去除标题栏-->
+        <item name="android:windowNoTitle">true</item>
+        <!--动画-->
+        <item name="android:windowAnimationStyle">@style/animationActivity</item>
+
+        <!--<item name="android:textColorSecondary">@color/color_333333</item>-->
+        <!--<item name="android:textColor">@color/color_333333</item>-->
+        <!--<item name="android:textColorHint">@color/color_bbbbbb</item>-->
+    </style>
+
+    <style name="animationActivity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/back_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/back_exit</item>
+    </style>
+
+    <style name="animationAlpha">
+        <item name="android:activityOpenEnterAnimation">@anim/dialog_alpha_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/dialog_alpha_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/dialog_alpha_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/dialog_alpha_exit</item>
+    </style>
 </resources>
